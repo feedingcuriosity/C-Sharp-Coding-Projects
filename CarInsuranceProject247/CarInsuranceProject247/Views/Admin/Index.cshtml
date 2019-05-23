@@ -1,0 +1,36 @@
+﻿@using CarInsuranceProject247.Models
+
+<!--Using the QuoteData model, passing in a list-->
+@model List<QuoteData>
+
+@{
+    ViewBag.Title = "Admin";
+}
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-mid-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Quotes</h5>
+        </div>
+        <div class="card-body">
+            @foreach (var quotedata in Model)
+            {
+                    <input type="hidden" name="Id" value="@quotedata.id" />
+                    <div class="row mb-3">
+                        <div class="col">
+                            @quotedata.FirstName
+                        </div>
+                        <div class="col">
+                            @quotedata.LastName
+                        </div>
+                        <div class="col">
+                            @quotedata.EmailAddress
+                        </div>
+                        <div class="col">
+                            $@quotedata.Quote.00/month
+                        </div>
+                    </div>
+            }
+        </div>
+    </div>
+</div>

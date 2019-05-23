@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Get Your Free Quote Today!</h1>
+    <p class="lead">Tell us a bit about yourself and receive your quote in seconds.</p>
+
+    <!--Create button that links to the RequestQuote controller that ultimately takes it to the RequestQuote View-->
+    <input type="button"
+           class="btn btn-block btn-primary"
+           value="Click Here for Personalized Quote"
+           onclick="location.href='@Url.Action("RequestQuote", "Home")'" />
+</div>
