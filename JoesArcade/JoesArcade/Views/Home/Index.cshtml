@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Joe's Arcade</h1>
+    <p class="lead">Welcome to the database of current video games in this arcade.</p>
+    <input type="button"
+           class="btn btn-block btn-primary"
+           value="View Games &raquo;"
+           onclick="location.href='@Url.Action("Index", "VideoGame")'" />
+</div>
